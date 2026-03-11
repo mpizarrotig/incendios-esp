@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Incendios forestales en España | Narrativa Interactiva</title>
+  <title>España en Llamas | Narrativa Interactiva</title>
   <style>
     :root {
       --bg-color: #0f0f0f;
@@ -28,7 +28,7 @@
       justify-content: center;
       align-items: center;
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                  url('https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=1920&q=80');
+                  url('https://upload.wikimedia.org/wikipedia/commons/d/d4/Forest_fire.jpg');
       background-size: cover;
       background-position: center;
       text-align: center;
@@ -52,7 +52,7 @@
     
     .chapter img {
       width: 100%;
-      height: 400px;
+      height: 450px;
       object-fit: cover;
       display: block;
     }
@@ -72,6 +72,7 @@
       height: 600px;
       border: none;
       background: #222;
+      margin-top: 20px;
     }
 
     footer {
@@ -82,7 +83,6 @@
       font-size: 0.9rem;
     }
 
-    /* Suavizado de scroll */
     html { scroll-behavior: smooth; }
   </style>
 </head>
@@ -90,68 +90,67 @@
 
   <header>
     <h1>España en Llamas</h1>
-    <p>Una investigación geoespacial sobre la evolución de los incendios forestales (1968-2025)</p>
-    <div style="margin-top: 30px; font-size: 0.9rem; color: var(--accent-color);">↓ DESLIZA PARA EXPLORAR LA HISTORIA</div>
+    <p>Investigación geoespacial basada en la Estadística General de Incendios Forestales (EGIF)</p>
+    <div style="margin-top: 30px; font-size: 0.9rem; color: var(--accent-color);">↓ DESLIZA PARA COMENZAR EL RECORRIDO</div>
   </header>
 
   <div class="container">
 
     <section class="chapter">
-      <img src="https://images.unsplash.com/photo-1521733853448-6157a39b2193?auto=format&fit=crop&w=1000&q=80" alt="Bosque quemado">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Incendio_en_el_Monte_de_la_Tortuga.jpg" alt="Bosque quemado en España">
       <div class="chapter-content">
-        <h2>1. La Huella del Tiempo</h2>
-        <p>Desde 1968, más de 7,8 millones de hectáreas han sido devoradas por el fuego en España. El mapa de calor revela una herida persistente, especialmente en el arco mediterráneo y el noroeste peninsular.</p>
-        <div class="stat-box">Dato oficial: Solo en 1985 se calcinaron 483.844 Ha, el peor registro de superficie de la historia moderna.</div>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=true&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=caption&captionBar=true&captionMenus=true#6/39.5210/-4.2952"></iframe>
+        <h2>1. La Huella del Tiempo (1968-2023)</h2>
+        <p>Desde que existen registros consolidados, España ha visto arder una superficie equivalente a varias comunidades autónomas juntas. La visualización muestra la densidad acumulada de un problema que lejos de remitir, se vuelve más complejo.</p>
+        <div class="stat-box">Dato Clave: Más de 7,8 millones de hectáreas quemadas en el registro histórico nacional.</div>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false&datalayers=e51328ac-8583-4ab6-a342-253dfc58e98c%2C980bb195-9058-46e3-9570-1b44afec1729%2C703805ae-707b-4e31-a3e4-4327683f141a&homeControl=false#6/39.5210/-4.2952"></iframe>
       </div>
     </section>
 
     <section class="chapter">
-      <img src="https://images.unsplash.com/photo-1544145945-f904253d0c71?auto=format&fit=crop&w=1000&q=80" alt="Fuego en el bosque">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/2017_Galicia_wildfires_-_Vigo.jpg" alt="Incendios en Galicia">
       <div class="chapter-content">
-        <h2>2. Galicia y la Intencionalidad</h2>
-        <p>El hombre es el causante de la mayoría de los incendios. En Galicia, casi el 49% del total de hectáreas arrasadas intencionadamente entre 1983 y 2017 reflejan un problema estructural de gestión y abandono rural.</p>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled#8/42.600/-7.800"></iframe>
+        <h2>2. Galicia y el Peso de la Intencionalidad</h2>
+        <p>El noroeste peninsular presenta una problemática singular. El 55% de los incendios en España son intencionados, pero en Galicia esta cifra adquiere dimensiones críticas, afectando no solo al ecosistema sino a la interfaz urbano-forestal.</p>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#8/42.600/-7.800"></iframe>
       </div>
     </section>
 
     <section class="chapter">
-      <img src="https://images.unsplash.com/photo-1563290301-e289895024ca?auto=format&fit=crop&w=1000&q=80" alt="Bomberos forestales">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Spanish_Forest_Firefighters_at_work.jpg" alt="Bomberos forestales en acción">
       <div class="chapter-content">
-        <h2>3. Riba de Saelices: La Tragedia Humana</h2>
-        <p>En julio de 2005, una negligencia en una barbacoa en Guadalajara desató uno de los incendios más negros de nuestra historia. 11 trabajadores perdieron la vida protegiendo el monte.</p>
-        <div class="stat-box">Siniestro: 12.732 hectáreas calcinadas y 11 víctimas mortales.</div>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled#12/40.9399/-2.2925"></iframe>
+        <h2>3. Riba de Saelices: El Coste de la Negligencia</h2>
+        <p>Julio de 2005 marcó un antes y un después en la prevención de incendios. Una barbacoa mal apagada en Guadalajara derivó en la pérdida de 11 vidas del retén de Cogolludo, evidenciando el peligro extremo de las negligencias.</p>
+        <div class="stat-box">Impacto: 12.732 hectáreas calcinadas y la mayor pérdida de vidas humanas en un solo siniestro forestal en España.</div>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#12/40.9399/-2.2925"></iframe>
       </div>
     </section>
 
     <section class="chapter">
-      <img src="https://images.unsplash.com/photo-1464241353125-b3058671183b?auto=format&fit=crop&w=1000&q=80" alt="Pérdidas económicas bosque">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Burnt_trees_after_a_forest_fire_in_Spain.jpg" alt="Bosque quemado Sant Mateu de Bages">
       <div class="chapter-content">
-        <h2>4. El Impacto Económico: Sant Mateu de Bages</h2>
-        <p>Los incendios no solo destruyen biodiversidad, también economías locales. El incendio de Sant Mateu de Bages en 1994 supuso pérdidas oficiales de más de 54 millones de euros.</p>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled#12/41.8161/1.6636"></iframe>
+        <h2>4. El Desastre Económico: Sant Mateu de Bages</h2>
+        <p>El año 1994 fue catastrófico para Cataluña. El incendio de Sant Mateu de Bages es uno de los máximos exponentes de las pérdidas económicas directas e indirectas que genera el fuego, superando los 54 millones de euros en daños.</p>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#12/41.8161/1.6636"></iframe>
       </div>
     </section>
 
     <section class="chapter">
-      <img src="https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?auto=format&fit=crop&w=1000&q=80" alt="Vista satélite fuego">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Air_tanker_dropping_retardant_on_wildfire.jpg" alt="Medios aéreos en Gran Incendio Forestal">
       <div class="chapter-content">
-        <h2>5. Los "Gigantes": GIF</h2>
-        <p>Los Grandes Incendios Forestales (>500 ha) son raros (0,6% del total), pero son responsables de casi la mitad de la superficie quemada total. Son incendios fuera de la capacidad de extinción.</p>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=true&scrollWheelZoom=false&zoomControl=true&editMode=disabled#6/39.800/-3.500"></iframe>
+        <h2>5. Los "Gigantes" Incontrolables (GIF)</h2>
+        <p>Los Grandes Incendios Forestales (>500 ha) son eventos extremos que superan la capacidad de extinción de los medios más avanzados. Aunque son pocos estadísticamente (0,6%), son los responsables de casi la mitad de la superficie quemada total.</p>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#6/39.800/-3.500"></iframe>
       </div>
     </section>
 
   </div>
 
   <footer>
-    <p>Proyecto realizado para el curso de Visualización de Datos - RTVE.</p>
-    <p>Autor: Manuel Pizarro </p>
-    <p>Fuentes: MITECO, EGIF.</p>
-    <p>Datos actualizados a 12 de marzo de 2026.</p>
+    <p>Desafío 2 | Curso de Visualización de Datos - Campus Haz RTVE</p>
+    <p>Autor | Manuel Pizarro</p>
+    <p>Fuentes: Ministerio para la Transición Ecológica (MITECO) - Base EGIF.</p>
+    <p>Datos procesados el 10/03/2026.</p>
   </footer>
 
 </body>
 </html>
-
