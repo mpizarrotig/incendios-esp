@@ -3,64 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>España en Llamas: StoryMap Interactivo</title>
+  <title>España en Llamas | Narrativa Interactiva</title>
   <style>
     :root {
-      --bg-color: #1a1a1a;
-      --text-color: #e0e0e0;
-      --accent-color: #e63946;
+      --bg-color: #0f0f0f;
+      --card-bg: #1e1e1e;
+      --text-color: #f5f5f5;
+      --accent-color: #ff4d00;
+      --secondary-text: #b0b0b0;
     }
-    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); }
-    header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524169358666-79f22534bc6e?auto=format&fit=crop&w=1350&q=80'); background-size: cover; text-align: center; padding: 20px; }
-    h1 { font-size: 3.5rem; color: var(--accent-color); margin-bottom: 10px; }
-    .chapter { padding: 100px 20px; max-width: 800px; margin: 0 auto; min-height: 80vh; }
-    .map-frame { width: 100%; height: 500px; border: 2px solid #333; border-radius: 8px; margin-top: 20px; }
-    .stat-box { background: #333; padding: 20px; border-left: 5px solid var(--accent-color); margin: 20px 0; }
-    footer { text-align: center; padding: 50px; font-size: 0.9rem; color: #888; }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                  url('https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    header h1 { font-size: 4rem; margin: 0; color: var(--accent-color); text-transform: uppercase; letter-spacing: 3px; }
+    header p { font-size: 1.5rem; max-width: 700px; margin-top: 10px; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+    .chapter {
+      margin-bottom: 120px;
+      background: var(--card-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .chapter-content { padding: 40px; }
+    
+    .chapter img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    h2 { color: var(--accent-color); font-size: 2.2rem; margin-top: 0; }
+    
+    .stat-box {
+      background: rgba(255, 77, 0, 0.1);
+      border-left: 4px solid var(--accent-color);
+      padding: 20px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 600px;
+      border: none;
+      background: #222;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      background: #050505;
+      color: var(--secondary-text);
+      font-size: 0.9rem;
+    }
+
+    /* Suavizado de scroll */
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>ESPAÑA EN LLAMAS</h1>
-    <p>Un recorrido interactivo por la historia de los incendios forestales (1968-2023)</p>
-    <p><i>Desliza para comenzar la historia</i></p>
+    <h1>España en Llamas</h1>
+    <p>Una investigación geoespacial sobre la evolución de los incendios forestales (1968-2023)</p>
+    <div style="margin-top: 30px; font-size: 0.9rem; color: var(--accent-color);">↓ DESLIZA PARA EXPLORAR LA HISTORIA</div>
   </header>
 
-  <section class="chapter">
-    <h2>1. La Huella del Fuego</h2>
-    <p>Entre 1968 y 2023 se han quemado en España casi 7,9 millones de hectáreas. En este mapa de calor inicial se observan las zonas con mayor recurrencia histórica.</p>
-    <div class="stat-box">Dato clave: 1985 fue el año con más superficie calcinada (483.844 Ha).</div>
-    <iframe class="map-frame" src="http://u.osmfr.org/m/1371913/#6/40.000/-3.000"></iframe>
-  </section>
+  <div class="container">
 
-  <section class="chapter">
-    <h2>2. El Noroeste: El Peso de la Intencionalidad</h2>
-    <p>El 55% de los incendios en España son provocados. Galicia es la zona más castigada por esta tipología, concentrando casi la mitad de las hectáreas quemadas intencionadamente.</p>
-    <iframe class="map-frame" src="http://u.osmfr.org/m/1371913/#8/42.600/-7.500"></iframe>
-  </section>
+    <section class="chapter">
+      <img src="https://images.unsplash.com/photo-1521733853448-6157a39b2193?auto=format&fit=crop&w=1000&q=80" alt="Bosque quemado">
+      <div class="chapter-content">
+        <h2>1. La Huella del Tiempo</h2>
+        <p>Desde 1968, más de 7,8 millones de hectáreas han sido devoradas por el fuego en España. El mapa de calor revela una herida persistente, especialmente en el arco mediterráneo y el noroeste peninsular.</p>
+        <div class="stat-box">Dato oficial: Solo en 1985 se calcinaron 483.844 Ha, el peor registro de superficie de la historia moderna.</div>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=true&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=caption&captionBar=true&captionMenus=true#6/39.5210/-4.2952"></iframe>
+      </div>
+    </section>
 
-  <section class="chapter">
-    <h2>3. La Mayor Tragedia Humana</h2>
-    <p>En 2005, el incendio de Riba de Saelices (Guadalajara) recordó el coste más alto del fuego: 11 miembros del retén perdieron la vida en un siniestro causado por una negligencia.</p>
-    <div class="stat-box">Ubicación: Riba de Saelices. Superficie: 12.732 Ha.</div>
-    <iframe class="map-frame" src="http://u.osmfr.org/m/1371913/#11/40.9399/-2.2925"></iframe>
-  </section>
+    <section class="chapter">
+      <img src="https://images.unsplash.com/photo-1544145945-f904253d0c71?auto=format&fit=crop&w=1000&q=80" alt="Fuego en el bosque">
+      <div class="chapter-content">
+        <h2>2. Galicia y la Intencionalidad</h2>
+        <p>El hombre es el causante de la mayoría de los incendios. En Galicia, casi el 49% del total de hectáreas arrasadas intencionadamente entre 1983 y 2017 reflejan un problema estructural de gestión y abandono rural.</p>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled#8/42.600/-7.800"></iframe>
+      </div>
+    </section>
 
-  <section class="chapter">
-    <h2>4. El Coste Económico del Desastre</h2>
-    <p>Más allá del valor ecológico, el fuego supone un impacto económico brutal. El incendio de Sant Mateu de Bages (1994) generó pérdidas por valor de 54,8 millones de euros.</p>
-    <iframe class="map-frame" src="http://u.osmfr.org/m/1371913/#11/41.8161/1.6636"></iframe>
-  </section>
+    <section class="chapter">
+      <img src="https://images.unsplash.com/photo-1563290301-e289895024ca?auto=format&fit=crop&w=1000&q=80" alt="Bomberos forestales">
+      <div class="chapter-content">
+        <h2>3. Riba de Saelices: La Tragedia Humana</h2>
+        <p>En julio de 2005, una negligencia en una barbacoa en Guadalajara desató uno de los incendios más negros de nuestra historia. 11 trabajadores perdieron la vida protegiendo el monte.</p>
+        <div class="stat-box">Siniestro: 12.732 hectáreas calcinadas y 11 víctimas mortales.</div>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled#12/40.9399/-2.2925"></iframe>
+      </div>
+    </section>
 
-  <section class="chapter">
-    <h2>5. Los "Grandes Incendios" (GIF)</h2>
-    <p>Aunque solo representan el 0,6% del total, los incendios de más de 500 Ha calcinan el 41% de toda la superficie quemada en España.</p>
-    <iframe class="map-frame" src="http://u.osmfr.org/m/1371913/#6/40.000/-3.000"></iframe>
-  </section>
+    <section class="chapter">
+      <img src="https://images.unsplash.com/photo-1464241353125-b3058671183b?auto=format&fit=crop&w=1000&q=80" alt="Pérdidas económicas bosque">
+      <div class="chapter-content">
+        <h2>4. El Impacto Económico: Sant Mateu de Bages</h2>
+        <p>Los incendios no solo destruyen biodiversidad, también economías locales. El incendio de Sant Mateu de Bages en 1994 supuso pérdidas oficiales de más de 54 millones de euros.</p>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled#12/41.8161/1.6636"></iframe>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <img src="https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?auto=format&fit=crop&w=1000&q=80" alt="Vista satélite fuego">
+      <div class="chapter-content">
+        <h2>5. Los "Gigantes": GIF</h2>
+        <p>Los Grandes Incendios Forestales (>500 ha) son raros (0,6% del total), pero son responsables de casi la mitad de la superficie quemada total. Son incendios fuera de la capacidad de extinción.</p>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=true&scrollWheelZoom=false&zoomControl=true&editMode=disabled#6/39.800/-3.500"></iframe>
+      </div>
+    </section>
+
+  </div>
 
   <footer>
-    <p>Fuente de datos: EGIF - Ministerio para la Transición Ecológica | Metodología inspirada en Civio</p>
+    <p>Proyecto realizado para el curso de Visualización de Datos Geoespaciales.</p>
+    <p>Fuentes: MITECO, EGIF y Metodología de Civio (España en Llamas).</p>
+    <p>Datos actualizados a 30 de junio de 2025.</p>
   </footer>
 
 </body>
