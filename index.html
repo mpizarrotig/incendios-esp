@@ -3,157 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>España en Llamas | Narrativa Interactiva</title>
+  <title>España en Llamas: StoryMap Interactivo</title>
   <style>
     :root {
-      --bg-color: #0f0f0f;
-      --card-bg: #1e1e1e;
-      --text-color: #f5f5f5;
-      --accent-color: #ff4d00;
-      --secondary-text: #b0b0b0;
+      --bg-color: #1a1a1a;
+      --text-color: #e0e0e0;
+      --accent-color: #e63946;
     }
-
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
+    body { 
+      margin: 0; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background-color: var(--bg-color); 
+      color: var(--text-color); 
     }
-
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                  url('assets/cabecera.jpg');
-      background-size: cover;
+    header { 
+      height: 100vh; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/cabecera.jpg'); 
+      background-size: cover; 
       background-position: center;
-      text-align: center;
-      padding: 0 20px;
+      text-align: center; 
+      padding: 20px; 
     }
-
-    header h1 {
-      font-size: 4rem;
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      color: var(--accent-color);
-    }
-
-    header p {
-      font-size: 1.5rem;
-      max-width: 800px;
-      margin-top: 20px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .chapter {
-      margin-bottom: 100px;
-      background-color: var(--card-bg);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    }
-
-    .chapter img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-
-    .chapter-content {
-      padding: 40px;
-    }
-
-    h2 {
-      color: var(--accent-color);
-      font-size: 2rem;
-      margin-top: 0;
-    }
-
-    .map-container {
-      width: 100%;
-      height: 500px;
-      border: none;
-      margin-top: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: var(--secondary-text);
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
-    }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.5rem; }
-      .chapter img { height: 250px; }
-    }
+    h1 { font-size: 3.5rem; color: var(--accent-color); margin-bottom: 10px; text-transform: uppercase; }
+    .chapter { padding: 80px 20px; max-width: 900px; margin: 0 auto; min-height: 80vh; }
+    .chapter img { width: 100%; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+    .map-frame { width: 100%; height: 600px; border: 2px solid #333; border-radius: 8px; margin-top: 20px; }
+    .stat-box { background: #333; padding: 20px; border-left: 5px solid var(--accent-color); margin: 20px 0; }
+    footer { text-align: center; padding: 50px; font-size: 0.9rem; color: #888; border-top: 1px solid #333; }
+    p { font-size: 1.1rem; line-height: 1.8; }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>España en Llamas</h1>
-    <p>Un recorrido por las cicatrices del fuego y la lucha por proteger nuestro patrimonio natural.</p>
+    <h1>ESPAÑA EN LLAMAS</h1>
+    <p>Un recorrido interactivo por la historia de los incendios forestales (1968-2023)</p>
+    <p><i>Desliza para comenzar la historia</i></p>
   </header>
 
-  <div class="container">
+  <section class="chapter">
+    <h2>1. La Huella del Fuego</h2>
+    <img src="assets/bosque-quemado.jpg" alt="La huella del fuego en España">
+    <p>Entre 1968 y 2023 se han quemado en España casi 7,9 millones de hectáreas. En este mapa de calor inicial se observan las zonas con mayor recurrencia histórica.</p>
+    <div class="stat-box">Dato clave: 1985 fue el año con más superficie calcinada (483.844 Ha).</div>
     
-    <section class="chapter">
-      <img src="assets/bomberos.jpg" alt="Bomberos forestales trabajando">
-      <div class="chapter-content">
-        <h2>1. Los Guardianes del Bosque</h2>
-        <p>Los bomberos forestales son la primera línea de defensa. A menudo en condiciones de precariedad y temporalidad, su labor es fundamental para evitar que los conatos se conviertan en catástrofes. Su lucha no es solo contra el fuego, sino también por el reconocimiento de su estatuto profesional.</p>
-      </div>
-    </section>
+    <iframe class="map-frame" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false&datalayers=e51328ac-8583-4ab6-a342-253dfc58e98c%2C980bb195-9058-46e3-9570-1b44afec1729%2C703805ae-707b-4e31-a3e4-4327683f141a&homeControl=false#6/39.5210/-4.2952"></iframe>
+  </section>
 
-    <section class="chapter">
-      <img src="assets/bosque-quemado.jpg" alt="Mapa de bosques quemados">
-      <div class="chapter-content">
-        <h2>2. La Huella del Fuego</h2>
-        <p>A lo largo de las últimas décadas, España ha visto cómo miles de hectáreas desaparecían bajo las llamas. Este mapa muestra la recurrencia y la extensión de las zonas afectadas, revelando patrones que nos ayudan a entender la vulnerabilidad de nuestro territorio.</p>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/grandes-incendios-forestales-en-espana-2025_1282225#6/40.246/-3.713"></iframe>
-      </div>
-    </section>
+  <section class="chapter">
+    <h2>2. El Noroeste: El Peso de la Intencionalidad</h2>
+    <img src="assets/galicia.jpg" alt="Incendios en el Noroeste">
+    <p>El 55% de los incendios en España son provocados. Galicia es la zona más castigada por esta tipología, concentrando casi la mitad de las hectáreas quemadas intencionadamente.</p>
+    
+    <iframe class="map-frame" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false&datalayers=e51328ac-8583-4ab6-a342-253dfc58e98c%2C980bb195-9058-46e3-9570-1b44afec1729%2C703805ae-707b-4e31-a3e4-4327683f141a&homeControl=false#8/42.600/-7.500"></iframe>
+  </section>
 
-    <section class="chapter">
-      <img src="assets/galicia.jpg" alt="Incendios en Galicia">
-      <div class="chapter-content">
-        <h2>3. Galicia: El Epicentro del Conflicto</h2>
-        <p>Galicia es una de las regiones más castigadas por los incendios forestales. La combinación de factores climáticos, el abandono del medio rural y la intencionalidad han convertido a esta comunidad en un punto crítico que requiere medidas de prevención específicas y una gestión forestal sostenible.</p>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/grandes-incendios-forestales-en-espana-2025_1282225#7/42.500/-8.000"></iframe>
-      </div>
-    </section>
+  <section class="chapter">
+    <h2>3. La Mayor Tragedia Humana</h2>
+    <img src="assets/guadalajara.jpg" alt="Incendio de Riba de Saelices">
+    <p>En 2005, el incendio de Riba de Saelices (Guadalajara) recordó el coste más alto del fuego: 11 miembros del retén perdieron la vida en un siniestro causado por una negligencia.</p>
+    <div class="stat-box">Ubicación: Riba de Saelices. Superficie: 12.732 Ha.</div>
+    
+    <iframe class="map-frame" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false&datalayers=e51328ac-8583-4ab6-a342-253dfc58e98c%2C980bb195-9058-46e3-9570-1b44afec1729%2C703805ae-707b-4e31-a3e4-4327683f141a&homeControl=false#11/40.9399/-2.2925"></iframe>
+  </section>
 
-    <section class="chapter">
-      <img src="assets/guadalajara.jpg" alt="Incendio Riba de Saelices">
-      <div class="chapter-content">
-        <h2>4. Riba de Saelices: Memoria de una Tragedia</h2>
-        <p>El incendio de Riba de Saelices en 2005 marcó un antes y un después en la percepción del riesgo. Con 11 víctimas mortales y más de 12.000 hectáreas calcinadas, este suceso subraya la importancia de extremar las precauciones en el uso del fuego cerca de masas forestales.</p>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#12/41.8161/1.6636"></iframe>
-      </div>
-    </section>
+  <section class="chapter">
+    <h2>4. El Coste Económico del Desastre</h2>
+    <img src="assets/sant-mateu.jpg" alt="Incendio de Sant Mateu de Bages">
+    <p>Más allá del valor ecológico, el fuego supone un impacto económico brutal. El incendio de Sant Mateu de Bages (1994) generó pérdidas por valor de 54,8 millones de euros.</p>
+    
+    <iframe class="map-frame" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false&datalayers=e51328ac-8583-4ab6-a342-253dfc58e98c%2C980bb195-9058-46e3-9570-1b44afec1729%2C703805ae-707b-4e31-a3e4-4327683f141a&homeControl=false#11/41.8161/1.6636"></iframe>
+  </section>
 
-    <section class="chapter">
-      <img src="assets/sant-mateu.jpg" alt="Medios aéreos en Gran Incendio Forestal">
-      <div class="chapter-content">
-        <h2>5. Los "Gigantes" Incontrolables (GIF)</h2>
-        <p>Los Grandes Incendios Forestales (>500 ha) son eventos extremos que superan la capacidad de extinción de los medios más avanzados. Aunque son pocos estadísticamente (0,6%), son los responsables de casi la mitad de la superficie quemada total.</p>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#6/39.800/-3.500"></iframe>
-      </div>
-    </section>
-
-  </div>
+  <section class="chapter">
+    <h2>5. Los "Grandes Incendios" (GIF)</h2>
+    <img src="assets/bomberos.jpg" alt="Grandes Incendios Forestales">
+    <p>Aunque solo representan el 0,6% del total, los incendios de más de 500 Ha calcinan el 41% de toda la superficie quemada en España.</p>
+    
+    <iframe class="map-frame" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false&datalayers=e51328ac-8583-4ab6-a342-253dfc58e98c%2C980bb195-9058-46e3-9570-1b44afec1729%2C703805ae-707b-4e31-a3e4-4327683f141a&homeControl=false#6/39.5210/-4.2952"></iframe>
+  </section>
 
   <footer>
     <p>Desafío 2 | Curso de Visualización de Datos - Campus Haz RTVE</p>
@@ -164,5 +96,6 @@
 
 </body>
 </html>
+
 
 
