@@ -28,114 +28,124 @@
       justify-content: center;
       align-items: center;
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                  url('https://upload.wikimedia.org/wikipedia/commons/d/d4/Forest_fire.jpg');
+                  url('assets/cabecera.jpg');
       background-size: cover;
       background-position: center;
       text-align: center;
       padding: 0 20px;
     }
 
-    header h1 { font-size: 4rem; margin: 0; color: var(--accent-color); text-transform: uppercase; letter-spacing: 3px; }
-    header p { font-size: 1.5rem; max-width: 700px; margin-top: 10px; }
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: var(--accent-color);
+    }
 
-    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    header p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
     .chapter {
-      margin-bottom: 120px;
-      background: var(--card-bg);
-      border-radius: 15px;
+      margin-bottom: 100px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    .chapter-content { padding: 40px; }
-    
     .chapter img {
       width: 100%;
-      height: 450px;
+      height: 400px;
       object-fit: cover;
-      display: block;
     }
 
-    h2 { color: var(--accent-color); font-size: 2.2rem; margin-top: 0; }
-    
-    .stat-box {
-      background: rgba(255, 77, 0, 0.1);
-      border-left: 4px solid var(--accent-color);
-      padding: 20px;
-      margin: 20px 0;
-      font-style: italic;
+    .chapter-content {
+      padding: 40px;
+    }
+
+    h2 {
+      color: var(--accent-color);
+      font-size: 2rem;
+      margin-top: 0;
     }
 
     .map-container {
       width: 100%;
-      height: 600px;
+      height: 500px;
       border: none;
-      background: #222;
       margin-top: 20px;
     }
 
     footer {
       text-align: center;
-      padding: 60px 20px;
-      background: #050505;
+      padding: 40px;
       color: var(--secondary-text);
       font-size: 0.9rem;
+      border-top: 1px solid #333;
     }
 
-    html { scroll-behavior: smooth; }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      .chapter img { height: 250px; }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>España en Llamas</h1>
-    <p>Investigación geoespacial basada en la Estadística General de Incendios Forestales (EGIF)</p>
-    <div style="margin-top: 30px; font-size: 0.9rem; color: var(--accent-color);">↓ DESLIZA PARA COMENZAR EL RECORRIDO</div>
+    <p>Un recorrido por las cicatrices del fuego y la lucha por proteger nuestro patrimonio natural.</p>
   </header>
 
   <div class="container">
-
+    
     <section class="chapter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Incendio_en_el_Monte_de_la_Tortuga.jpg" alt="Bosque quemado en España">
+      <img src="assets/bomberos_forestales.jpg" alt="Bomberos forestales trabajando">
       <div class="chapter-content">
-        <h2>1. La Huella del Tiempo (1968-2023)</h2>
-        <p>Desde que existen registros consolidados, España ha visto arder una superficie equivalente a varias comunidades autónomas juntas. La visualización muestra la densidad acumulada de un problema que lejos de remitir, se vuelve más complejo.</p>
-        <div class="stat-box">Dato Clave: Más de 7,8 millones de hectáreas quemadas en el registro histórico nacional.</div>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false&datalayers=e51328ac-8583-4ab6-a342-253dfc58e98c%2C980bb195-9058-46e3-9570-1b44afec1729%2C703805ae-707b-4e31-a3e4-4327683f141a&homeControl=false#6/39.5210/-4.2952"></iframe>
+        <h2>1. Los Guardianes del Bosque</h2>
+        <p>Los bomberos forestales son la primera línea de defensa. A menudo en condiciones de precariedad y temporalidad, su labor es fundamental para evitar que los conatos se conviertan en catástrofes. Su lucha no es solo contra el fuego, sino también por el reconocimiento de su estatuto profesional.</p>
       </div>
     </section>
 
     <section class="chapter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/2017_Galicia_wildfires_-_Vigo.jpg" alt="Incendios en Galicia">
+      <img src="assets/huella_fuego.jpg" alt="Mapa de bosques quemados">
       <div class="chapter-content">
-        <h2>2. Galicia y el Peso de la Intencionalidad</h2>
-        <p>El noroeste peninsular presenta una problemática singular. El 55% de los incendios en España son intencionados, pero en Galicia esta cifra adquiere dimensiones críticas, afectando no solo al ecosistema sino a la interfaz urbano-forestal.</p>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#8/42.600/-7.800"></iframe>
+        <h2>2. La Huella del Fuego</h2>
+        <p>A lo largo de las últimas décadas, España ha visto cómo miles de hectáreas desaparecían bajo las llamas. Este mapa muestra la recurrencia y la extensión de las zonas afectadas, revelando patrones que nos ayudan a entender la vulnerabilidad de nuestro territorio.</p>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/grandes-incendios-forestales-en-espana-2025_1282225#6/40.246/-3.713"></iframe>
       </div>
     </section>
 
     <section class="chapter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Spanish_Forest_Firefighters_at_work.jpg" alt="Bomberos forestales en acción">
+      <img src="assets/galicia.jpg" alt="Incendios en Galicia">
       <div class="chapter-content">
-        <h2>3. Riba de Saelices: El Coste de la Negligencia</h2>
-        <p>Julio de 2005 marcó un antes y un después en la prevención de incendios. Una barbacoa mal apagada en Guadalajara derivó en la pérdida de 11 vidas del retén de Cogolludo, evidenciando el peligro extremo de las negligencias.</p>
-        <div class="stat-box">Impacto: 12.732 hectáreas calcinadas y la mayor pérdida de vidas humanas en un solo siniestro forestal en España.</div>
-        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#12/40.9399/-2.2925"></iframe>
+        <h2>3. Galicia: El Epicentro del Conflicto</h2>
+        <p>Galicia es una de las regiones más castigadas por los incendios forestales. La combinación de factores climáticos, el abandono del medio rural y la intencionalidad han convertido a esta comunidad en un punto crítico que requiere medidas de prevención específicas y una gestión forestal sostenible.</p>
+        <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/grandes-incendios-forestales-en-espana-2025_1282225#7/42.500/-8.000"></iframe>
       </div>
     </section>
 
     <section class="chapter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Burnt_trees_after_a_forest_fire_in_Spain.jpg" alt="Bosque quemado Sant Mateu de Bages">
+      <img src="assets/riba_de_saelices.jpg" alt="Incendio Riba de Saelices">
       <div class="chapter-content">
-        <h2>4. El Desastre Económico: Sant Mateu de Bages</h2>
-        <p>El año 1994 fue catastrófico para Cataluña. El incendio de Sant Mateu de Bages es uno de los máximos exponentes de las pérdidas económicas directas e indirectas que genera el fuego, superando los 54 millones de euros en daños.</p>
+        <h2>4. Riba de Saelices: Memoria de una Tragedia</h2>
+        <p>El incendio de Riba de Saelices en 2005 marcó un antes y un después en la percepción del riesgo. Con 11 víctimas mortales y más de 12.000 hectáreas calcinadas, este suceso subraya la importancia de extremar las precauciones en el uso del fuego cerca de masas forestales.</p>
         <iframe class="map-container" src="https://umap.openstreetmap.fr/es/map/incendios-forestales-en-espana_1371913?scaleControl=true&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false#12/41.8161/1.6636"></iframe>
       </div>
     </section>
 
     <section class="chapter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Air_tanker_dropping_retardant_on_wildfire.jpg" alt="Medios aéreos en Gran Incendio Forestal">
+      <img src="assets/gigantes.jpg" alt="Medios aéreos en Gran Incendio Forestal">
       <div class="chapter-content">
         <h2>5. Los "Gigantes" Incontrolables (GIF)</h2>
         <p>Los Grandes Incendios Forestales (>500 ha) son eventos extremos que superan la capacidad de extinción de los medios más avanzados. Aunque son pocos estadísticamente (0,6%), son los responsables de casi la mitad de la superficie quemada total.</p>
@@ -154,3 +164,4 @@
 
 </body>
 </html>
+
